@@ -1,8 +1,20 @@
 # EC2 Metadata Fetch Script
 
-This script retrieves metadata for an EC2 instance, including the **Instance ID, Instance Type, and Availability Zone**. It works in both:
-- **AWS EC2 instances** (supports both IMDSv1 & IMDSv2)
-- **LocalStack** (via AWS CLI)
+Overview
+
+This script retrieves instance metadata such as Instance ID, Instance Type, and Availability Zone. It supports both IMDSv1 and IMDSv2 and detects whether it's running in LocalStack or on a real AWS EC2 instance.
+
+Prerequisites
+
+Before running the script, ensure you have the following installed and configured:
+
+Docker Desktop (for running LocalStack)
+
+LocalStack (mock AWS services locally)
+
+Python (for additional utilities if needed)
+
+AWS CLI (configured in VSCode)
 
 ## Features
 ✅ Supports **IMDSv1** and **IMDSv2**
@@ -11,10 +23,6 @@ This script retrieves metadata for an EC2 instance, including the **Instance ID,
 ✅ Provides **error handling** to prevent failures
 ✅ Works seamlessly in **AWS Cloud & Local Dev Environments**
 
-## Prerequisites
-- **AWS CLI** installed and configured
-- **Bash** shell environment (Linux, macOS, WSL, Git Bash on Windows)
-- (For LocalStack) **LocalStack running on `localhost:4566`**
 
 ## Installation
 Clone the repository:
